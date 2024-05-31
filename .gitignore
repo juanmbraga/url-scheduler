@@ -1,1 +1,12 @@
+bin/*
+performance/*
+obj/*
+tests/*-out.txt
 /Specifications.pdf
+/analise.txt
+/analisereg.txt
+/entrada.txt
+/entrada-out.txt
+/regextestes.txt
+/registro_de_acessos.txt
+/saida.txt

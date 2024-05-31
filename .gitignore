@@ -2,6 +2,7 @@ bin/*
 performance/*
 obj/*
 tests/*-out.txt
+tests/registro_de_acessos.txt
 /Specifications.pdf
 /analise.txt
 /analisereg.txt

@@ -1,0 +1,13 @@
+ADD_URLS 11
+http://www.globo.com/
+http://www.globo.com/videos/jornalnacional
+http://globo.com/
+http://globo.com/videos/
+http://globo.com
+http://duckduckgo.com/i/0c1be8ce.png
+http://globo.com/
+http://www.globo.com/paginas/amarelas
+http://globo.com/mais/uma/pagina/com/nivel/bem/alto
+http://www.uol.com.br/
+http://ge.globo.com/
+ESCALONA_TUDO

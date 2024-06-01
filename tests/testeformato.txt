@@ -1,0 +1,23 @@
+ADD_URLS 21
+http://www.globo.com/
+http://www.uol.com.br/
+http://ge.globo.com/
+http://www.superdownloads.com.br/
+http://www.globo.com/videos/jornalnacional
+http://github.com/collections/made-in-india/
+http://ge.globo.com/futebol/futebol-internacional/futebol-espanhol/times/real-madrid/
+http://virtual.ufmg.br/20212/my/
+http://www.tudogostoso.com.br/receita/1443-pao-de-queijo.html
+http://globoesporte.com/spfc/index.html
+http://www.site.com/pagina.aviao
+http://duckduckgo.com/i/0c1be8ce.png
+http://host1.com/p2.php
+http://h3.com.br/home.htm
+http://h3.com.br/a/b/c/news.html
+http://www.globoesporte.com/page1.js?q=copa#group1
+http://www.youtube.com/watch?v=lBuF54ZhZFo
+http://virtual.ufmg.br/20212/course/view.php?id=11910
+http://google.com#fragmento
+http://google.com///#tres_barras_e_um_fragmento
+http://www.www.com.br/www./www.txt
+ESCALONA_TUDO

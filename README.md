@@ -2,7 +2,14 @@ Project 01 | DCC205 - Data Structures | March 2022, Federal University of Minas 
 
 # Url Scheduler
 ## Overview
-In this project for Data Structures class students were meant to implement a url scheduler for web crawling. It was to be written in `C/C++` and should feature data structures implemented from scratch, have performance metrics and analysis and be fully documented. Despite the seemingly simple data structure, it was quite the challenge to put it all together.
+In this project for Data Structures class students were meant to implement a url scheduler that is meant to receive, sort and provide URLs for a web crawler. It was to be written in `C/C++` and should feature data structures implemented from scratch, have performance metrics and analysis and be fully documented. Despite the seemingly simple data structure, it was quite the challenge to put it all together.
+
+## Implementation objectives and specifications
+- Implement from scratch a data structure to organize received URLs using a *depth-first* policy (prioritize hosts that were found first).
+- Write code to recognize and decompose URL addresses based on their hosts and subdomain levels, as well as detect malformed ones. I used `regular expressions` here.
+- Implent support for reading input data from files indicated by command-line arguments and flags (with [`getopt`](https://azrael.digipen.edu/~mmead/www/Courses/CS180/getopt.html.), [mirror](https://web.archive.org/web/20240604140838/https://azrael.digipen.edu/~mmead/www/Courses/CS180/getopt.html)).
+- Generate multiple performance metrics for analysis, such as execution time, storage use, spacial locality and more. Time and space complexity were also considered.
+- Write up a full documentation for the project.
 
 ### A url-what?
 A *web crawler* is an essential part of a *search engine* that visits URLs and downloads their content, which is subsequently processed, indexed, and used by the search engine to decide which results to show the users. 
@@ -11,7 +18,7 @@ The problem of **crawl scheduling** consists in determining when to (re-)downloa
 
 This project is meant to be a scheduler that will receive, sort and provide URLs for the use of a crawler (which will not be implemented).
 
-#### How this scheduler will sort URLs:
+#### How will this scheduler sort URLs:
 URLs can be decomposed in a few parts:
 
 `<protocol>`://`<subdomain>` `<host>` `<path>`?`<query>`#`<fragment>`
@@ -20,23 +27,10 @@ For example:
 
 - `https`://`www`.`google.com` `/search`?`q=search+terms+here`#`<fragment>`
 - `https`://`accounts`.`google.com` `/v3/signin/identifier`?`continue=gibberish`
+- **`https`://`website.com` `/level1/level2/level3/level4`**
 
-The scheduler will sort new URLs by their `<host>` (in order of appearance), and addresses that belong to the same host should be sorted by the directory/path hierarchy, like so:
-```
-ufmg.br
--> ufmg.br/dcc -> ufmg.br/icex -> ufmg.br/dcc/courses/ -> ufmg.br/dcc/contact -> ufmg.br/dcc/courses/computer-science
-website.com
--> website.com/level1 -> website.com/level1/level2 -> website.com/level1/level2/level3
-```
-
+The scheduler will sort new URLs by their `<host>` (in order of appearance), and addresses that belong to the same host should be sorted by the directory hierarchy (or path levels).
 Check out Section 2 and Appendix in the `Documentation.pdf` file for more info.
-## Implementation objectives and specifications
-- Implement from scratch a data structure to organize received URLs using a *depth-first* policy (prioritize hosts that were found first).
-- Write code to recognize and decompose URL addresses based on their hosts and subdomain levels, as well as detect malformed ones. I used `regular expressions` here.
-- Implent support for reading input data from files indicated by command-line arguments and flags (with [`getopt`](https://azrael.digipen.edu/~mmead/www/Courses/CS180/getopt.html.), [mirror](https://web.archive.org/web/20240604140838/https://azrael.digipen.edu/~mmead/www/Courses/CS180/getopt.html)).
-- Generate multiple performance metrics for analysis, such as execution time, storage use, spacial locality and more. Time and space complexity were also considered.
-- Write up a full documentation for the project.
-
 
 ## Important files and execution instructions
 - `Documentation.pdf✨` is a complete report the problem descriptions, implementation choices and performance evaluations (in portuguese).
